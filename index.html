@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="action.js" defer></script>
+</head>
+<body>
+    
+    <main>
+        <nav class="nav">
+        <header>
+            <span class="header-text">Simple Todo</span>
+        </header>
+        <ul class="control">    
+            <li>
+                <form action="" class="search-form">
+            <input type="search" name="" id="searchBox">
+            <button class="search-btn" for="search">Search</button>
+            </form>
+            </li>
+            <li><button class="addTodo"><span class="lg-screen-text">Add </span><span class="small-screen-icon">
+                <svg  width="30px" height="30px" viewBox="0 0 512 512"><path d="M256,48C141.31,48,48,141.31,48,256s93.31,208,208,208,208-93.31,208-208S370.69,48,256,48Zm96,224H272v80H240V272H160V240h80V160h32v80h80Z"/></svg>
+
+            </span></button></li>
+           
+        </ul>
+        <form class="textarea">
+            <span class="box-close">x</span>
+            <input type="text" class="textBox" value="" placeholder="Add a new task">
+           <button id="addTodo">Add</button>
+        </form>
+        <form class="update">
+            <span class="x-close">x</span>
+            <input type="text" class="updateBox" value="" placeholder="Update a task">
+           <button id="update">Update Task</button>
+        </form>
+        <div class="nav-bottom">
+                <span class="title">History</span>
+    
+    
+        <ul class="history">
+            
+        </ul>
+        </div>
+    </nav>
+        <div class="todo-list">
+            <div class="addInfo">
+                <div>
+                    <span class="stat ratio"><span class="histotal"></span></span>
+                    <span>Completed</span>
+                </div>
+                <div>
+                    <span class="stat total">0</span>
+                    <span>Total tasks</span>
+                </div>
+            </div>
+            <ol class="main-list">
+            
+            </ol>
+        </div>>
+    </main>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
