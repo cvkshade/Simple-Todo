@@ -19,10 +19,9 @@ const list = document.querySelector(".main-list");
 const searchForm = document.querySelector(".search-form");
 const updater = document.querySelector(".update");
 const historyList = document.querySelector(".history");
-console.log(historyList)
 let todoNum;
 let localArr;
-let todolist;
+let todolist = [];
 let completed;
 
 let todoHis = [];
@@ -32,6 +31,7 @@ updateStorage = () => {
 };
 getStorage = () => {
   let localyStoreData = window.localStorage.getItem('todoList');
+  if(localyStoreData === null) return;
   const retrieveArr = JSON.parse(localyStoreData);
   todolist = [...retrieveArr]
 
@@ -52,7 +52,6 @@ todoSearch = () => {
 
     list.append(searchItem);
   }
-  console.log(searchResult);
 };
 editTodo = (id) => {
   todolist.map((todo) => (todo.id === id ? { ...todo, ...updateInfo } : todo));
@@ -98,9 +97,6 @@ updateState = (event) => {
     event.target.nextElementSibling.innerHTML = 'Uncompleted'
   }
     stateRender() 
-      console.log(
-        event.target.nextElementSibling.classList
-      )
 };
 
 stateRender = ()=> {
